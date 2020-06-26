@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * js最开始研发的目的:验证表单是否合法
+			 * 
+			 * 正则表达式: 可以理解规则表达式, 指定一个规则,判断某个字符串是否符合这个规则
+			 */
+			
+			/*
+			 * 第一种构造函数的方式:
+			 */
+			//new RegExp('a');  检验字符串是否包含字母a
+			var reg = new RegExp('a');
+			console.log(reg.test('abc'));
+			console.log(reg.test('cccc'));
+			//new RegExp('a|b'); 是否包含a或者b
+			reg = new RegExp('a|b');
+			console.log(reg.test('acbc'));
+			//new RegExp('ab'); 是否包含连续的ab
+			reg =new RegExp('ab');
+			console.log(reg.test('acbc'));
+			console.log(reg.test('的范德萨发abc'));
+			console.log(reg.test('的范德萨发Abc'));
+			//new RegExp('ab'); 是否包含连续的ab
+			//第二个参数i:表示忽略大小写
+			reg =new RegExp('ab','i');
+			console.log(reg.test('的范德萨发Abc'));
+		</script>
+	</body>
+</html>

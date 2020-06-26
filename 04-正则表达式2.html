@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 正则字面量方式:
+			 */
+			/*
+			 * 表达式:
+			 *  a   包含字母a 
+			 *  ab  连续ab
+			 *  a|b a或b
+			 *  [ab] []表示或
+			 *  [a-z]  所有小写字母
+			 *  [A-Z]  所有大写字母
+			 *  [0-9]  所有数字
+			 *  [^]    取反
+			 *  ()     分组的概念
+			 * 	(ab)|c 连续的ab或者c
+			 */
+			var reg = /a/;
+			reg = /ab/;
+			reg = /a|b|c|d|f|g|/;
+			reg = /[ab]/;
+			reg = /[a-z]/;
+			reg = /[0-9]/;
+			reg = /[^a-z]/
+			reg = /(ab)|c/;
+			console.log(reg.test('cbad'));
+			console.log(reg.test('cdfg'));
+			console.log(reg.test('123'));
+			console.log(reg.test('cdfg'));
+			console.log(reg.test('1aa'));
+			console.log(reg.test('a1'));
+			console.log(reg.test('dsfdfacyyy'));
+			
+		</script>
+	</body>
+</html>
